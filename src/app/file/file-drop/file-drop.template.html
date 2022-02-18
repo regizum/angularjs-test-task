@@ -1,0 +1,26 @@
+<div
+  class="file-drop"
+  ng-class="{'file-drop-over': $ctrl.isOver}"
+  id="file-drop"
+  ng-show="$ctrl.isHTML5"
+  ng-click="$ctrl.browseFiles()"
+>
+  <div class="file-drop-icon">
+    <i class="far fa-file-lines fa-2x"></i>
+  </div>
+  <div class="file-drop-title d-none d-sm-block">
+    Drop your image here or click to browse
+  </div>
+  <div class="file-drop-title d-sm-none">Click here to browse files</div>
+  <div class="file-drop-subtitle">Supports plain/text files.</div>
+</div>
+
+<div class="form-group" ng-show="!$ctrl.isHTML5">
+  <label for="file-select">Browse files:</label>
+  <input
+    type="file"
+    id="file-select"
+    onchange="angular.element(this).scope().handleInputChangeEvent(event)"
+    multiple
+  />
+</div>

@@ -1,0 +1,124 @@
+//
+// File
+// -----------------------------
+
+.file {
+  transition: max-height 0.25s ease-out;
+  overflow: hidden;
+  max-width: $spacer * 60;
+  width: 100%;
+
+  @include media-breakpoint-down(xs) {
+    transition: none;
+    max-height: none !important;
+    width: auto;
+  }
+
+  &-drop {
+    padding: $spacer * 2 $spacer * 4;
+    text-align: center;
+    border-radius: $border-radius-base;
+    border: 2px dashed $gray-d;
+    cursor: pointer;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    line-height: $spacer * 2;
+    margin-bottom: $spacer * 2;
+
+    &:hover {
+      border-color: $brand-primary;
+      background-color: $body-bg;
+
+      .file-drop-icon {
+        transform: scale(1.2);
+      }
+    }
+
+    // Elements
+
+    &-icon {
+      //color: $gray-light;
+      font-size: $font-size-h2;
+      margin-bottom: $spacer * 2;
+      color: $brand-primary;
+      padding: $spacer 0;
+
+      @include transition(all 1s);
+
+      .fa {
+        vertical-align: middle;
+      }
+    }
+
+    &-title {
+      font-size: $font-size-h5;
+      font-weight: $font-weight-bold;
+    }
+
+    &-subtitle {
+      font-size: $font-size-small;
+      color: $gray-light;
+    }
+
+    &-over {
+      border-color: $brand-primary;
+      background-color: $body-bg;
+
+      .file-drop-icon {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &-list {
+    &-item {
+      border: 1px solid $gray-d;
+      display: flex;
+      align-items: center;
+      border-radius: $border-radius-base;
+      padding: $spacer * 2;
+      margin-bottom: $spacer * 2;
+
+      &-desc {
+      }
+
+      &-title {
+        font-size: $font-size-h5;
+        font-weight: $font-weight-bold;
+      }
+
+      &-info {
+        padding-left: 0;
+        margin-bottom: 0;
+        font-size: $font-size-xs;
+        color: $gray-light;
+        line-height: $spacer * 1.5;
+
+        > li {
+          display: inline;
+
+          &:not(:first-child) {
+            &:before {
+              content: "\f111 ";
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              font-size: 6px;
+              vertical-align: middle;
+              padding: 0 3px;
+            }
+          }
+        }
+      }
+
+      &-tools {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        .btn:not(:first-child) {
+          margin-left: $spacer;
+        }
+      }
+    }
+  }
+}

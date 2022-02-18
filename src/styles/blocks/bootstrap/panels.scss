@@ -1,0 +1,21 @@
+//
+// Panels
+// -----------------------------
+
+.panel {
+  @include box-shadow($box-shadow);
+
+  &-responsive {
+    @include media-breakpoint-down(xs) {
+      margin-left: -$grid-gutter-width * 0.5;
+      margin-right: -$grid-gutter-width * 0.5;
+      border-radius: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+
+      .panel-body {
+        padding: $panel-body-padding-xs;
+      }
+    }
+  }
+}

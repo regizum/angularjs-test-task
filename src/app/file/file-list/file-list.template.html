@@ -1,0 +1,7 @@
+<div class="file-list">
+  <file-list-item
+    ng-repeat="item in $ctrl.files track by $index"
+    file="item"
+    on-delete="$ctrl.delete"
+  ></file-list-item>
+</div>

@@ -1,0 +1,31 @@
+//
+// Buttons
+// -----------------------------
+
+.btn {
+  .fa,
+  .far {
+    vertical-align: middle;
+  }
+
+  &-squared {
+    width: $padding-base-vertical * 2 + $line-height-base * $font-size-base + 2;
+    padding-right: 0;
+    padding-left: 0;
+
+    &.btn-lg {
+      width: $padding-large-vertical * 2 + $line-height-large * $font-size-large +
+        2;
+    }
+
+    &.btn-sm {
+      width: $padding-small-vertical * 2 + $line-height-small * $font-size-small +
+        2;
+    }
+
+    &.btn-xs {
+      width: $padding-xs-vertical * 2 + $line-height-small * $font-size-small +
+        2;
+    }
+  }
+}
