@@ -22,4 +22,3 @@ cull.json
 ng6-app/**/
 ng6-app
 .cache-require-paths.json
-dist
