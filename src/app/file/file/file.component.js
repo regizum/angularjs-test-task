@@ -10,7 +10,7 @@ angular.module("file").component("file", {
       ctrl.files = retrieveFiles();
 
       function retrieveFiles() {
-        return JSON.parse(localStorage["files"]);
+        return localStorage["files"] ? JSON.parse(localStorage["files"]) : [];
       }
     },
   ],

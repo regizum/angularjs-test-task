@@ -13,7 +13,6 @@ angular.module("file").component("fileDrop", {
 
       const init = () => {
         ctrl.isHTML5 = !!(File && FormData);
-        ctrl.files = ctrl.files || [];
       };
 
       const handleDragEnterEvent = (event) => {
