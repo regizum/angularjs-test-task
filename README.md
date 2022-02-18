@@ -1,4 +1,4 @@
-# Webpack config for AngularJS
+# File Upload (Test Task AngularJS)
 
 > Test Task
 
